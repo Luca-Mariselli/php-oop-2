@@ -35,9 +35,8 @@ $prodotti = [$ossoGiocattolo, $crocchetteMaxi, $cucciaCoperta]
             echo 
             "<div class='card'>" .
                 "<div class='bg'>" . "Nome:" . " " . $prodottoSingolo->getNome() . "</div>" .
-                "<div class='bg'>" . "categoria" . "</div>" .
                 "<div class='bg'>" . "Tipologia:" . " " . $prodottoSingolo->getClasse() . "</div>" . 
-                "<div class='bg'>" . $prodottoSingolo->getPrezzo() . "</div>" .
+                "<div class='bg'>" . "Prezzo:" . " " . $prodottoSingolo->getPrezzo() . "$" . "</div>" .
             "</div>";
             
         }

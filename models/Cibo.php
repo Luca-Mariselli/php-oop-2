@@ -6,4 +6,5 @@ class Cibo extends Prodotto{
     public function getClasse(){
         return __CLASS__;
     }
+    
 }

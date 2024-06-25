@@ -27,7 +27,9 @@ html{
 
 .bg{
     background-color: #8697C3;
-    padding: 0.3rem;
-    margin: 0.5rem;
+    padding: 1rem;
+    margin: 1rem;
     border-radius: 25px;
+    font-size: 20px;
+    text-align: center;
 }
