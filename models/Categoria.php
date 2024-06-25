@@ -8,4 +8,8 @@ class Categoria{
         $this->nome = $nomeCategoria;
         $this->icona = $percorsoImmagine;
     }
+
+    public function getCategoria(){
+        return "$this->nomeCategoria";
+    }
 }

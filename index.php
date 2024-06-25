@@ -10,13 +10,15 @@ include __DIR__ . "/models/Gioco.php";
 $categoriaCane = new Categoria("Cane", "https://img.freepik.com/free-psd/cute-brown-white-dog-scene_23-2150179279.jpg?size=626&ext=jpg&ga=GA1.1.1141335507.1719273600&semt=ais_user");
 $categoriaGatto = new Categoria("Gatto", "https://i.pinimg.com/originals/4e/09/37/4e09375f76be3c80001040dda7db13dc.png");
 
-//Proprieta cibo
-// $crocchetteMaxi = new Cibo("Secco", "Mensile")
-// $crocchetteMaxi = new Cibo("Secco", "Mensile")
 
 //Prodotti
-$ossoGiocattolo = new Prodotto("Osso Giocattolo", $categoriaCane, 15)
+$ossoGiocattolo = new Gioco("Osso Giocattolo", $categoriaCane, 15);
+$crocchetteMaxi = new Cibo("Crocchette maxi", $categoriaGatto, 30);
+$cucciaCoperta = new Cuccia("Cuccia Coperta", $categoriaCane, 50);
 
+
+//Array con tutti i prodotti
+$prodotti = [$ossoGiocattolo, $crocchetteMaxi, $cucciaCoperta]
 ?>
 
 <!DOCTYPE html>
@@ -28,12 +30,19 @@ $ossoGiocattolo = new Prodotto("Osso Giocattolo", $categoriaCane, 15)
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <pre>
-       <?php
-       var_dump($categoriaCane);
-       var_dump($categoriaGatto);
-       var_dump($ossoGiocattolo);
-       ?>  
-    </pre>
+    <div class="container">
+        <?php foreach($prodotti as $prodottoSingolo){
+            echo 
+            "<div class='card'>" .
+                "<div class='bg'>" . "Nome:" . " " . $prodottoSingolo->getNome() . "</div>" .
+                "<div class='bg'>" . "categoria" . "</div>" .
+                "<div class='bg'>" . "Tipologia:" . " " . $prodottoSingolo->getClasse() . "</div>" . 
+                "<div class='bg'>" . $prodottoSingolo->getPrezzo() . "</div>" .
+            "</div>";
+            
+        }
+        ?>  
+        
+    </div>
 </body>
 </html>

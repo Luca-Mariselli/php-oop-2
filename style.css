@@ -8,3 +8,26 @@ html{
     background-color: #222;
     color: white;
 }
+
+.container{
+    width: 1000px;
+    margin: 5% auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    
+}
+
+.card{
+    background-color: #3D52A1;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+.bg{
+    background-color: #8697C3;
+    padding: 0.3rem;
+    margin: 0.5rem;
+    border-radius: 25px;
+}
